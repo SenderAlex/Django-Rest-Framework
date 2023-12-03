@@ -1,0 +1,38 @@
+pip install django
+django-admin startproject drf
+python .\manage.py startapp cars
+python .\manage.py makemigrations cars -- создает скрипты
+python .\manage.py migrate -- применяет скрипты и выполняет скрипты
+python .\manage.py createsuperuser
+pip install djangorestframework
+django-admin --version -- версия django
+pip install --upgrade django==4.1.10(4.2.7)  !!!!!!!!!!!!
+#pip install django-rest-swagger -- установка swagger
+pip install drf-yasg
+pip install -U drf-yasg
+pip install -U drf-yasg[validation]
+pip install django-filter
+
+AllowAny -- разрешается все и всем (права доступа)
+IsAuthenticated -- разрешается все и всем, кто залогинился, а кто не залогинился -- ничего.
+Is AdminUser -- разрешается все и всем только админу
+IsAuthenticatedOrReadOnly -- незалогиненные могут только читать, а залогиненнные могут все.
+
+C:\Users\LENOVO\PycharmProjects\pythonProject1\Django_Rest_Framework\drb
+
+Serializer -- это механизм трансформации данных в другое состояние
+-----------------------------------------------------------------------------------------------------------------
+Чем отличается put запрос от patch запроса?
+
+Написать проект на свою тему, которая позволяет производить все CRUD(create, read, update, delete) операции с
+сортировками, фильтрациями, но это должны быть не машины.
+
+Serializer -- конвертирует произвольные объекты языка python, в том числе django и queryset в формат json и наоборот.
+
+python .\manage.py shell -- делает запрос INSERT в базу данных. Затем он обновляет сам объект: Внутрь записывается
+идентификатор статьи, взятый из базы данных
+
+класс view отвечает за обработку запросов, а класс serializer -- за обработку данных
+
+Класс ModelSerializer такой же, как и обычный класс Serializer , за исключением того, что: Он автоматически сгенерирует
+для вас набор полей на основе модели.
